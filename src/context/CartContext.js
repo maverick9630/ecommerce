@@ -20,6 +20,7 @@ export function CartProvider({ children }) {
       const response = await fetch('https://api.pujakaitem.com/api/products');
       const jsonData = await response.json();
       setData(jsonData);
+      console.log(jsonData)
       setLoading(false);
     } catch (error) {
       console.error('Error fetching data:', error);

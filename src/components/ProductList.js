@@ -1,6 +1,6 @@
-// src/components/ProductList.js
 import React from 'react';
 import { useCart } from '../context/CartContext'; // Import the custom hook
+import ProductCard from './ProductCard'; // Import the ProductCard component
 
 function ProductList() {
   const { data, loading } = useCart();
@@ -11,14 +11,11 @@ function ProductList() {
 
   return (
     <div>
-      <h1>Products List</h1>
-      <ul>
-        {data.map((product) => (
-          <li key={product.id}>
-            <strong>{product.name}</strong> - ${product.price}
-          </li>
-        ))}
-      </ul>
+      <h1 className="text-2xl font-semibold mb-4 ">Products List</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+        
+          <ProductCard/>
+      </div>
     </div>
   );
 }
