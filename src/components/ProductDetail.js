@@ -14,7 +14,7 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="bg-white p-4 shadow-lg rounded-lg flex">
+    <div className="bg-white p-4 mt-10 m-8 shadow-lg rounded-lg flex">
       <div className="w-1/2">
         <img src={product.image} alt={product.name} className="w-full h-auto" />
       </div>
